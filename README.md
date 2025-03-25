@@ -1,6 +1,9 @@
 # Pizza_Sales_Analysis_SQL:
 
-# Data analysis of pizza_sales 
+<p align="center">
+  <img width="700" height="170" src="![pizza image](https://github.com/user-attachments/assets/11bd6822-0c3a-4ed0-8569-5eb3b7fefe02)
+">
+</p> 
 
 ## Project Overview:
 The PIZZA Sales Database project is designed to manage and analyze the sales data of various pizza orders. It utilizes a relational database structure to store detailed information about each order, including the type of pizza, quantity ordered, and associated order IDs. This project aims to streamline the tracking of pizza sales, enabling better inventory management and sales analysis for pizzerias.

@@ -1,7 +1,7 @@
 # Pizza_Sales_Analysis_SQL:
 
 <p align="center">
-  <img width="700" height="170" src="pizza image.png">
+  <img width="700" height="470" src="pizza image.png">
 </p> 
 
 ## Project Overview:

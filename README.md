@@ -42,7 +42,7 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
 
 
 # Project Result
-[Click here to get full code](https://github.com/bagdenatasha2001/Pizza_Sales_Analysis_SQL/blob/main/pizza_Analysis_questions.sql)
+[Click here to get full code](pizza_sales_analysis.sql)
 
 
 # Query Task

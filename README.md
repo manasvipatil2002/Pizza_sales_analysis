@@ -58,6 +58,8 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
 
 
  3. " Retrieve the top 5 most frequently ordered pizzas?"
+
+  
 <img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_3.png" width="300" />&nbsp;
 
 

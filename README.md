@@ -95,11 +95,13 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
 
 
 10. "List all orders along with their respective pizza types and quantities?"
+
 <img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_10.png" width="300" />&nbsp;
 
 
 11." Find the running total of pizzas ordered by order ID?"
-<img src="" width="300" />&nbsp;
+
+<img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_11.png" width="300" />&nbsp;
 
 
 12. "Which pizza has the highest quantity ordered?"

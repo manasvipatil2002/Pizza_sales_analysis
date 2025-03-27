@@ -106,7 +106,7 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
 
 12. "Which pizza has the highest quantity ordered?"
 
-<img src="" width="300" />&nbsp;
+<img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_12.png" width="300" />&nbsp;
 
 13. "Find all orders that contain more than 2 pizzas using a subquery?"
 

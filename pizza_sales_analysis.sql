@@ -16,156 +16,140 @@ primary key(order_details_id));
 
 
 
--- Retrieve the total number of orders placed.
 
-select count(order_id) as total_orders from orders;
+-- 1) How many unique orders exist in the ORDER_DETAILS table.--
+
+SELECT COUNT(DISTINCT order_id) AS unique_orders 
+FROM ORDER_DETAILS;
 
 
--- Calculate the total revenue generated from pizza sales.
+-- 2)  List all pizza types (pizza_id) sold and their quantities.--
 
-SELECT 
-    round(sum(order_details.quantity * pizzas.price),
-             2)AS total_sales
-FROM
-    order_details
-        JOIN
-    pizzas ON pizzas.pizza_id = order_details.pizza_id
-    
-    
-    
-    --  Identify the highest-priced pizza.
+SELECT pizza_id, SUM(quantity) AS total_quantity 
+FROM ORDER_DETAILS 
+GROUP BY pizza_id;
 
-SELECT 
-    pizza_types.name, pizzas.price
-FROM
-    pizza_types
-        JOIN
-    pizzas ON pizza_types.pizza_type_id = pizzas.pizza_type_id
-ORDER BY pizzas.price DESC
+-- 3)  Retrieve the top 5 most frequently ordered pizzas.--
+
+SELECT pizza_id, SUM(quantity) AS total_quantity 
+FROM ORDER_DETAILS 
+GROUP BY pizza_id 
+ORDER BY total_quantity DESC 
+LIMIT 5;
+
+
+-- 4) Retrieve the order_id with the maximum total quantity of pizzas.--
+
+SELECT order_id 
+FROM ORDER_DETAILS 
+GROUP BY order_id 
+ORDER BY SUM(quantity) DESC 
 LIMIT 1;
 
 
+-- 5) Write a query to find the maximum order_details_id in the table.--
 
--- Identify the most common pizza size ordered.
-
-select quantity, count(order_details_id) 
-from order_details group by quantity;
-
-SELECT 
-    pizzas.size,
-    COUNT(order_details.order_details_id) AS order_count
-FROM
-    pizzas
-        JOIN
-    order_details ON pizzas.pizza_id = order_details.pizza_id
-GROUP BY pizzas.size
-ORDER BY order_count DESC;
+SELECT MAX(order_details_id) AS max_order_details_id 
+FROM ORDER_DETAILS;
 
 
 
+-- 6) How many unique pizza types are there in the ORDER_DETAILS table? --
 
--- List the top 5 most ordered pizza types along with their quantities.
-
-SELECT 
-    pizza_types.name, SUM(order_details.quantity) AS quantity
-FROM
-    pizza_types
-        JOIN
-    pizzas ON pizza_types.pizza_type_id = pizzas.pizza_type_id
-        JOIN
-    order_details ON order_details.pizza_id = pizzas.pizza_id
-GROUP BY pizza_types.name
-ORDER BY quantity DESC
-LIMIT 5;
-
--- Join the necessary tables to find the total quantity of each pizza category ordered.
-
-SELECT 
-    pizza_types.category,
-    SUM(order_details.quantity) AS quantity
-FROM
-    pizza_types
-        JOIN
-    pizzas ON pizza_types.pizza_type_id = pizzas.pizza_type_id
-        JOIN
-    order_details ON order_details.pizza_id = pizzas.pizza_id
-GROUP BY pizza_types.category
-ORDER BY quantity DESC;
+SELECT COUNT(DISTINCT pizza_id) AS unique_pizzas
+ FROM ORDER_DETAILS;
 
 
--- Group the orders by date and calculate the average number of pizzas ordered per day.
+-- 7) Find the quantity of each pizza ordered?--
 
-SELECT 
-    ROUND(AVG(quantity), 0) as avg_pizza_ordered_per_day
-FROM
-    (SELECT 
-        orders.order_date, SUM(order_details.quantity) AS quantity
-    FROM
-        orders
-    JOIN order_details ON orders.order_id = order_details.order_id
-    GROUP BY orders.order_date) AS order_quantity;
-    
-    
-    
-    -- Determine the top 3 most ordered pizza types based on revenue
+SELECT pizza_id, SUM(quantity) AS total_quantity 
+FROM ORDER_DETAILS 
+GROUP BY pizza_id;
 
-SELECT 
-    pizza_types.name,
-    SUM(order_details.quantity * pizzas.price) AS revenue
-FROM
-    pizza_types
-        JOIN
-    pizzas ON pizzas.pizza_type_id = pizza_types.pizza_type_id
-        JOIN
-    order_details ON order_details.pizza_id = pizzas.pizza_id
-GROUP BY pizza_types.name
-ORDER BY revenue DESC
-LIMIT 3;
+-- 8)  What is the average quantity of pizzas ordered per order?--
+
+SELECT AVG(quantity) AS average_quantity 
+FROM ORDER_DETAILS;
 
 
 
 
 
--- Calculate the percentage contribution of each pizza type to total revenue.
+-- 9) How many pizzas were ordered for each order? --
 
-select pizza_types.category,
-round(sum(order_details.quantity * pizzas.price) / (select round(sum(order_details.quantity * pizzas.price),2) as total_sales
-from order_details join
-pizzas on pizzas.pizza_id = order_details.pizza_id) * 100,2) as revenue
-from pizza_types join pizzas
-on pizza_types.pizza_type_id = pizzas.pizza_type_id
-join order_details
-on order_details.pizza_id = pizzas.pizza_id
-group by pizza_types.category order by revenue desc;
+SELECT o.order_id, COUNT(od.pizza_id) AS total_pizzas 
+FROM ORDERS o 
+JOIN ORDER_DETAILS od ON o.order_id = od.order_id 
+GROUP BY o.order_id;
 
 
--- Analyze the cumulative revenue generated over time.
 
-select order_date,
-sum(revenue) over(order by order_date) as cum_revenue
-from
-(select orders.order_date,
-sum(order_details.quantity * pizzas.price) as revenue
-from order_details join pizzas
-on order_details.pizza_id = pizzas.pizza_id
-join orders
-on orders.order_id = order_details.order_id
-group by orders.order_date) as sales;
+-- 10) List all orders along with their respective pizza types and quantities? --
 
+SELECT od.order_id, od.pizza_id, od.quantity 
+FROM ORDER_DETAILS od;
 
--- Determine the top 3 most ordered pizza types based on revenue for each pizza category.
+-- 11) Find the running total of pizzas ordered by order ID.--
+
+SELECT order_id, 
+       SUM(quantity) OVER (ORDER BY order_id) AS running_total 
+FROM ORDER_DETAILS;
 
 
-select name, revenue from 
-(select category, name, revenue,
-rank() over(partition by category order by revenue desc) as rn
-from 
-(select pizza_types.category, pizza_types.name,
-sum((order_details.quantity) * pizzas.price) as revenue
-from pizza_types join pizzas
-on pizza_types.pizza_type_id=pizzas.pizza_type_id
-join order_details
-on order_details.pizza_id = pizzas.pizza_id
-group by pizza_types.category, pizza_types.name) as a) as b
-where rn <= 3;
 
+
+-- 12) Which pizza has the highest quantity ordered?-- 
+
+SELECT pizza_id, SUM(quantity) AS total_quantity 
+FROM ORDER_DETAILS 
+GROUP BY pizza_id 
+ORDER BY total_quantity DESC LIMIT 1;
+
+
+
+
+-- 13) Find all orders that contain more than 2 pizzas using a subquery.--
+
+SELECT order_id 
+FROM ORDER_DETAILS 
+GROUP BY order_id 
+HAVING SUM(quantity) > 2;
+
+
+-- 14) List all pizzas that have been ordered more than once using a subquery? --
+
+SELECT DISTINCT pizza_id 
+FROM ORDER_DETAILS 
+WHERE pizza_id IN (SELECT pizza_id FROM ORDER_DETAILS GROUP BY pizza_id HAVING SUM(quantity) > 1);
+
+
+
+ -- 15) Classify orders into 'Single', 'Double', and 'Multiple' based on quantity ordered.-- 
+
+ SELECT order_details_id,
+       CASE 
+           WHEN quantity = 1 THEN 'Single'
+           WHEN quantity = 2 THEN 'Double'
+           ELSE 'Multiple'
+       END AS order_classification
+FROM ORDER_DETAILS;
+
+
+
+
+-- 16) Count how many pizzas fall into each classification ('Single', 'Double', 'Multiple'). --
+
+SELECT CASE 
+           WHEN quantity = 1 THEN 'Single'
+           WHEN quantity = 2 THEN 'Double'
+           ELSE 'Multiple'
+       END AS classification,
+       COUNT(*) AS count
+FROM ORDER_DETAILS
+GROUP BY classification;
+
+
+ -- 17) What is the maximum quantity of a single type of pizza ordered? --
+
+SELECT MAX(quantity) AS max_quantity 
+FROM ORDER_DETAILS;

@@ -125,7 +125,7 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
 
  16. "Count how many pizzas fall into each classification ('Single', 'Double', 'Multiple')?"
 
-<img src="" width="300" />&nbsp;
+<img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_16.png" width="300" />&nbsp;
 
 17. "What is the maximum quantity of a single type of pizza ordered?"
 

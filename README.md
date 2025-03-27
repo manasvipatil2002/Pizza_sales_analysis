@@ -53,7 +53,8 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
 
 2.  "List all pizza types (pizza_id) sold and their quantities?"
  
- <img src="./Images/pizza_2.png" alt="pizza_3.png" width="300"/> &nbsp;
+
+<img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_2.png" width="300" />&nbsp;
 
 
  3. " Retrieve the top 5 most frequently ordered pizzas?"

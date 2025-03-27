@@ -119,7 +119,8 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
 
  
 15. "Classify orders into 'Single', 'Double', and 'Multiple' based on quantity ordered"
-<img src="" width="300" />&nbsp;
+
+<img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_15.png" width="300" />&nbsp;
 
 
  16. "Count how many pizzas fall into each classification ('Single', 'Double', 'Multiple')?"

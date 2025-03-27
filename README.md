@@ -65,7 +65,7 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
 
  4. "Retrieve the order_id with the maximum total quantity of pizzas?"
 
-<img src="" width="300" />&nbsp;
+<img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_4.png" width="300" />&nbsp;
 
 
  5. "Write a query to find the maximum order_details_id in the table?"

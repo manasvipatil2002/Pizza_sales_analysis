@@ -36,6 +36,8 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
     requirements.
 
 # Tools & Library Used
+<img src="" width="200" height="200"/>&nbsp;
+
 
 <img src="![mysql_img](https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/mysql_img.png)
 " width="200"/> &nbsp;

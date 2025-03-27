@@ -76,7 +76,7 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
 
 6. "How many unique pizza types are there in the ORDER_DETAILS table?" 
  
-<img src="" width="300" />&nbsp;
+<img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_6.png" width="300" />&nbsp;
 
 
  7."Find the quantity of each pizza ordered?"

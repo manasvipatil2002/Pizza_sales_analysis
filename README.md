@@ -114,7 +114,8 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
 
 
 14. "List all pizzas that have been ordered more than once using a subquery?"
-<img src="" width="300" />&nbsp;
+
+<img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_14.png" width="300" />&nbsp;
 
  
 15. "Classify orders into 'Single', 'Double', and 'Multiple' based on quantity ordered"

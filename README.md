@@ -53,56 +53,43 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
 
 2.  "List all pizza types (pizza_id) sold and their quantities?"
  
-
 <img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_2.png" width="300" />&nbsp;
-
 
  3. " Retrieve the top 5 most frequently ordered pizzas?"
 
-  
 <img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_3.png" width="300" />&nbsp;
-
 
  4. "Retrieve the order_id with the maximum total quantity of pizzas?"
 
 <img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_4.png" width="300" />&nbsp;
 
-
  5. "Write a query to find the maximum order_details_id in the table?"
 
-
 <img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_5.png" width="300" />&nbsp;
-
 
 6. "How many unique pizza types are there in the ORDER_DETAILS table?" 
  
 <img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_6.png" width="300" />&nbsp;
 
-
  7."Find the quantity of each pizza ordered?"
 
 <img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_7.png" width="300" />&nbsp;
-
 
 8. "What is the average quantity of pizzas ordered per order?"
 
 <img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_8.png" width="300" />&nbsp;
 
-
  9. "How many pizzas were ordered for each order?"
     
 <img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_9.png" width="300" />&nbsp;
-
 
 10. "List all orders along with their respective pizza types and quantities?"
 
 <img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_10.png" width="300" />&nbsp;
 
-
 11." Find the running total of pizzas ordered by order ID?"
 
 <img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_11.png" width="300" />&nbsp;
-
 
 12. "Which pizza has the highest quantity ordered?"
 
@@ -110,18 +97,15 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
 
 13. "Find all orders that contain more than 2 pizzas using a subquery?"
 
-<img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_13.png" width="300" />&nbsp;
-
+<img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_13.png" width="200" />&nbsp;
 
 14. "List all pizzas that have been ordered more than once using a subquery?"
 
 <img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_14.png" width="300" />&nbsp;
 
- 
 15. "Classify orders into 'Single', 'Double', and 'Multiple' based on quantity ordered"
 
 <img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_15.png" width="300" />&nbsp;
-
 
  16. "Count how many pizzas fall into each classification ('Single', 'Double', 'Multiple')?"
 
@@ -129,8 +113,7 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
 
 17. "What is the maximum quantity of a single type of pizza ordered?"
 
-<img src="" width="300" />&nbsp;
+<img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_17.png" width="300" />&nbsp;
 
 
-18. "Find all orders with their corresponding quantities and classify them as above average or below average based on average quantity per order?"
-<img src="" width="300" />&nbsp;
+

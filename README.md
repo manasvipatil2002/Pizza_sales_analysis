@@ -81,7 +81,7 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
 
  7."Find the quantity of each pizza ordered?"
 
-<img src="" width="300" />&nbsp;
+<img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_7.png" width="300" />&nbsp;
 
 
 8. "What is the average quantity of pizzas ordered per order?"

@@ -110,7 +110,7 @@ The PIZZA Sales Database project is designed to manage and analyze the sales dat
 
 13. "Find all orders that contain more than 2 pizzas using a subquery?"
 
-<img src="" width="300" />&nbsp;
+<img src="https://github.com/manasvipatil2002/Pizza_sales_analysis/blob/main/code%20output/pizza_13.png" width="300" />&nbsp;
 
 
 14. "List all pizzas that have been ordered more than once using a subquery?"
